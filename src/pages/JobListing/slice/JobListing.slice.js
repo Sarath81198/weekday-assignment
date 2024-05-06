@@ -5,7 +5,7 @@ export const jobsSlice = createSlice({
   initialState: [],
   reducers: {
     addJobs: (state, action) => {
-      state.push(action.payload);
+      return [...state, ...action.payload]
     },
   },
 });
